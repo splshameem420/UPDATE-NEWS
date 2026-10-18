@@ -1,0 +1,86 @@
+@media (max-width: 768px) {
+
+    .mid-header-bar .flex-header-between {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .site-branding .site-title .h1 {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .header-ad-banner {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .top-header-bar .flex-header-between {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .topbar-announcement {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .main-navigation .flex-header-between {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-menu-wrapper ul#primary-menu {
+        justify-content: center;
+    }
+
+    .header-container-class {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-menu-class {
+        order: 1;
+    }
+
+    .header-search-form {
+        order: 2;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Footer */
+    
+    .footer-top-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .footer-brand-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .brand-horizontal-ticker {
+        border-left: none;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .footer-mid-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-top-content {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    /*Homepage*/
+
+
+}

@@ -1,0 +1,210 @@
+.site-header {
+    background-color: #0b0f19;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.header-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- 1. TOP BAR --- */
+.top-header-bar {
+    background-color: #0f172a;
+    border-bottom: 1px solid #1e293b;
+    padding: 8px 0;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.visitor-time-info,
+.visitor-tracker-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.topbar-announcement {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+}
+
+.notice-badge {
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.notice-text {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.divider {
+    color: #475569;
+}
+
+.visitor-tracker-info span span {
+    color: #38bdf8;
+}
+
+.top-social-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-icon-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.social-icon-item:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+/* --- 2. MID HEADER --- */
+.mid-header-bar {
+    padding: 20px 0;
+    background-color: #0b0f19;
+    border-bottom: 1px solid #1e293b;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.site-title a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.site-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-description {
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.header-ad-banner {
+    max-width: 728px;
+    overflow: hidden;
+}
+
+/* --- 3. MAIN NAVIGATION --- */
+.main-navigation {
+    background-color: #0f172a;
+    border-bottom: 1px solid #1e293b;
+    padding: 8px 0;
+}
+
+.nav-menu-wrapper ul#primary-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.nav-menu-wrapper ul#primary-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.action-btn {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.menu-item {
+    background-color: rgb(36, 31, 31);
+    border: none;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+.header-search-form {
+    display: flex;
+    align-items: center;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 2px 8px;
+}
+
+.header-search-form .search-field {
+    background: transparent;
+    border: none;
+    color: #01fac4;
+    padding: 4px 6px;
+    outline: none;
+    font-size: 13px;
+}
+
+.header-search-form .search-submit {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+}

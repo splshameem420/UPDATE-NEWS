@@ -1,0 +1,77 @@
+/* YouTube Suggested Sidebar Style */
+.yt-suggest-sidebar {
+    padding: 4px;
+    border-radius: 8px;
+    font-family: 'SolaimanLipi', Arial, sans-serif;
+}
+
+.yt-suggest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Individual Suggested Item */
+.yt-suggest-item {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.yt-suggest-item:hover {
+    background-color: #4b4747;
+}
+
+/* Thumbnail (Fixed Ratio Look) */
+.yt-suggest-thumb {
+    width: 190px;
+    height: 110px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #e2e8f0;
+}
+
+.yt-suggest-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Info Section */
+.yt-suggest-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.yt-suggest-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+    margin: 0 0 4px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-top: 2px;
+}
+
+/* Meta Information (Views & Time) */
+.yt-suggest-meta {
+    font-size: 12px;
+    color: #bac7ca;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.yt-suggest-meta .dot {
+    font-size: 8px;
+}

@@ -1,0 +1,16 @@
+/*
+Theme Name: BD NEWS
+Theme URI: https://bdnews.com.bd/
+Description: A modern news theme for BD NEWS
+Version: 1.0.0
+Author: BD NEWS Team
+Author URI: https://bdnews.com.bd/
+*/
+
+
+html {
+    background-color: black;
+    height: 100%;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
