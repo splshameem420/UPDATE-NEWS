@@ -107,6 +107,21 @@ $footer_copyright = get_option( 'bd_news_footer_copyright', '© ' . date('Y') . 
                 </div>
 
             </div>
+
+            <div class="footer-social-icons-mobile">
+                <?php if ( ! empty( $social_links ) && is_array( $social_links ) ) : ?>
+                    <?php foreach ( $social_links as $social ) : 
+                        $name = isset( $social['name'] ) ? strtolower( trim( $social['name'] ) ) : '';
+                        $url  = isset( $social['url'] ) ? $social['url'] : '#';
+                        $icon = function_exists( 'bd_news_get_social_icon' ) ? bd_news_get_social_icon( $name ) : 'fa-solid fa-link';
+                    ?>
+                        <a href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="<?php echo esc_attr( $icon ); ?>"></i>
+                        </a>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+
         </div>
     </div>
 

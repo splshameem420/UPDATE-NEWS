@@ -84,6 +84,11 @@ $header_ad_code     = get_option( 'bd_news_header_ad_code', '' );
             <div class="site-branding">
                 <?php if ( has_custom_logo() ) : ?>
                     <div class="site-logo"><?php the_custom_logo(); ?></div>
+                    <h1 class="site-title-a">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                            <?php bloginfo( 'name' ); ?>
+                        </a>
+                    </h1>
                 <?php else : ?>
                     <h1 class="site-title">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -139,6 +144,13 @@ $header_ad_code     = get_option( 'bd_news_header_ad_code', '' );
                         <button type="submit" class="search-submit">🔍</button>
                     </form>
                 </div>
+            </div>
+            
+            <div class="mobile-search-bar">
+                <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <input type="search" class="search-field" placeholder="Search News..." value="<?php echo get_search_query(); ?>" name="s" />
+                    <button type="submit" class="search-submit">🔍</button>
+                </form>
             </div>
         </div>
     </nav>

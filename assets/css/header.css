@@ -107,6 +107,38 @@
     border-bottom: 1px solid #1e293b;
 }
 
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-logo {
+    max-width: 60px;
+    height: auto;
+}
+
+.site-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.site-title-a {
+    margin: 0;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.site-title-a a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-title-a a:hover {
+    color: #f74d4d;
+}
+
 .site-title {
     margin: 0;
     font-size: 28px;
@@ -114,8 +146,7 @@
 }
 
 .site-title a:hover {
-    color: #ffffff;
-    text-decoration: underline;
+    color: #f74d4d;
 }
 
 .site-title a {
@@ -184,6 +215,7 @@
     box-sizing: border-box;
     border-radius: 12px;
 }
+
 .header-search-form {
     display: flex;
     align-items: center;
@@ -207,4 +239,8 @@
     border: none;
     color: #94a3b8;
     cursor: pointer;
+}
+
+.mobile-search-bar {
+    display: none;
 }

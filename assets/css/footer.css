@@ -63,6 +63,10 @@
     color: #121212;
 }
 
+.footer-social-icons-mobile {
+    display: none;
+}
+
 /* --- 2. FOOTER MID --- */
 .footer-mid {
     padding: 45px 0 50px 0;

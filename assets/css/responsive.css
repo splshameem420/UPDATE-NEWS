@@ -7,6 +7,14 @@
         justify-content: center;
     }
 
+    .site-title-a {
+        font-size: 40px !important;
+    }
+
+    .news-title {
+        font-size: 18px !important;
+    }
+    
     .site-branding .site-title .h1 {
         text-align: center;
         justify-content: center;
@@ -46,41 +54,64 @@
         order: 1;
     }
 
-    .header-search-form {
-        order: 2;
+    .mobile-search-bar {
+        display: block;
         width: 100%;
-        margin-top: 10px;
+        padding: 10px 15px;
+        box-sizing: border-box;
     }
 
-    /* Footer */
-    
-    .footer-top-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+    .header-actions {
+        display: none !important;
     }
-    .footer-brand-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+
+    /* Footer adjustments for mobile */
+    .text-logo-badge {
+        padding: 0 !important;
     }
-    .brand-horizontal-ticker {
-        border-left: none;
-        padding-left: 0;
-        width: 100%;
+
+    .brand-track-group {
+        gap: 3px !important;
+    }
+
+    .footer-social-icons {
+        display: none !important;
+    }
+
+    .footer-social-icons-mobile {
+        display: flex !important;
+        gap: 12px !important;
+        justify-content: center !important;
+        margin-top: 15px !important;
+    }
+
+    .footer-social-icons-mobile a {
+        color: #ffffff !important;
+        font-size: 20px !important;
+    }
+
+    .footer-social-icons-mobile .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        color: #ffffff;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .footer-social-icons-mobile .social-icon:hover {
+        background-color: #ffffff;
+        color: #121212;
     }
 
     .footer-mid-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
     }
-    
-    .footer-top-content {
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
-    }
-
-    /*Homepage*/
 
 
 }
