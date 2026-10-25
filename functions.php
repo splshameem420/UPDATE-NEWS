@@ -102,6 +102,15 @@ function bd_news_assets() {
         true 
     );
 
+    // Single JS
+    wp_enqueue_script( 
+        'bd_news_single', 
+        get_template_directory_uri() . '/assets/js/single.js', 
+        array('jquery'), 
+        null, 
+        true 
+    );
+
     wp_localize_script( 'bd_news_header', 'bd_news_vars', array(
         'ajax_url' => admin_url( 'admin-ajax.php' )
     ));

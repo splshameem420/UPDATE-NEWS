@@ -96,3 +96,106 @@ document.addEventListener('DOMContentLoaded', function () {
             applyInfo({});
         });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.getElementById("primary-menu");
+    const container = document.querySelector(".nav-menu-wrapper");
+    const moreLi = document.querySelector(".more-menu-item");
+    const headerActions = document.querySelector(".header-actions");
+
+    if (!menu || !container || !moreLi) return;
+
+    const subMenu = moreLi.querySelector(".sub-menu");
+    const moreLink = moreLi.querySelector("a");
+
+    function handleMenuOverflow() {
+        // যদি স্ক্রিন মোবাইল সাইজ (৯৯২ পিক্সেল বা তার কম) হয়, তবে ডেস্কটপ ওভারফ্লো কোড কাজ করবে না
+        if (window.innerWidth <= 992) {
+            const hiddenItems = Array.from(subMenu.children);
+            hiddenItems.forEach(item => {
+                menu.insertBefore(item, moreLi);
+            });
+            moreLi.classList.add("hidden-more");
+            return;
+        }
+
+        // --- ডেস্কটপ ওভারফ্লো লজিক ---
+        const hiddenItems = Array.from(subMenu.children);
+        hiddenItems.forEach(item => {
+            menu.insertBefore(item, moreLi);
+        });
+
+        moreLi.classList.add("hidden-more");
+
+        let actionsWidth = headerActions ? headerActions.offsetWidth : 280;
+        let availableWidth = container.offsetWidth - actionsWidth - 30; 
+        let currentWidth = 0;
+        let hasOverflow = false;
+
+        const items = Array.from(menu.children);
+
+        items.forEach(item => {
+            if (item === moreLi) return;
+
+            let itemWidth = item.offsetWidth + 10; 
+
+            if (currentWidth + itemWidth > availableWidth) {
+                hasOverflow = true;
+            }
+
+            if (hasOverflow) {
+                subMenu.appendChild(item);
+            } else {
+                currentWidth += itemWidth;
+            }
+        });
+
+        if (hasOverflow) {
+            moreLi.classList.remove("hidden-more");
+        } else {
+            moreLi.classList.add("hidden-more");
+        }
+    }
+
+    window.addEventListener("resize", handleMenuOverflow);
+    setTimeout(handleMenuOverflow, 50);
+
+    if (moreLink) {
+        moreLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            moreLi.classList.toggle("active");
+        });
+    }
+
+    document.addEventListener("click", function (e) {
+        if (!moreLi.contains(e.target)) {
+            moreLi.classList.remove("active");
+        }
+    });
+});
+
+// মোবাইল হ্যামবার্গার মেনু ড্রয়ার টগল স্ক্রিপ্ট
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navWrapper = document.querySelector(".nav-menu-wrapper");
+
+    if (menuToggle && navWrapper) {
+        menuToggle.addEventListener("click", function (e) {
+            e.stopPropagation();
+            navWrapper.classList.toggle("toggled");
+            document.body.classList.toggle("mobile-menu-active");
+
+            const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", !expanded);
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!navWrapper.contains(e.target) && !menuToggle.contains(e.target)) {
+                navWrapper.classList.remove("toggled");
+                document.body.classList.remove("mobile-menu-active");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    }
+});

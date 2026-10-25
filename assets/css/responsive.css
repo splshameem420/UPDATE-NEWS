@@ -36,42 +36,132 @@
         padding-left: 0;
     }
 
-    .main-navigation .flex-header-between {
-        flex-direction: column;
-        gap: 12px;
+    /* Mobile Menu */
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .menu-item {
+        background-color: #0f172a !important;
+    }
+
+    .nav-menu-wrapper {
+        position: fixed !important;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100vh;
+        background-color: #0f172a;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.6);
+        transition: left 0.3s ease-in-out;
+        z-index: 100001;
+        padding-top: 70px;
+        overflow-y: auto;
+    }
+
+    .nav-menu-wrapper.toggled {
+        left: 0;
     }
 
     .nav-menu-wrapper ul#primary-menu {
-        justify-content: center;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100%;
+        gap: 0 !important;
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
 
-    .header-container-class {
-        display: flex;
-        flex-direction: column;
+    .nav-menu-wrapper ul#primary-menu > li {
+        width: 100%;
+        border-bottom: 1px solid #1e293b;
     }
 
-    .mobile-menu-class {
-        order: 1;
-    }
-
-    .mobile-search-bar {
+    .nav-menu-wrapper ul#primary-menu a {
+        padding: 12px 20px !important;
         display: block;
         width: 100%;
-        padding: 10px 15px;
         box-sizing: border-box;
+        color: #ffffff;
+        text-decoration: none;
     }
 
-    .header-actions {
-        display: none !important;
+    body.mobile-menu-active::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 100000;
     }
 
     /* Footer adjustments for mobile */
-    .text-logo-badge {
-        padding: 0 !important;
+    .footer-top,
+    .footer-container,
+    .footer-top-content,
+    .footer-brand-wrapper {
+        width: 100%;
+        max-width: 100% !important;
+        overflow: hidden;
+        box-sizing: border-box;
     }
 
-    .brand-track-group {
-        gap: 3px !important;
+    .footer-top-content {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-brand-wrapper {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-main-title {
+        display: flex !important;
+        justify-content: center;
+        align-items: center !important;
+        text-align: center;
+        width: 100%;
+        margin: 0 0 10px 0 !important;
+    }
+
+    .footer-main-title a {
+        font-size: 40px !important;
+        font-weight: 800 !important;
+        line-height: 1.2;
+    }
+
+    .brand-horizontal-ticker {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center !important;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ticker-label {
+        font-size: 20px !important;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: 600 !important;
+    }
+
+    .horizontal-slider-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        position: relative !important;
     }
 
     .footer-social-icons {
@@ -82,7 +172,7 @@
         display: flex !important;
         gap: 12px !important;
         justify-content: center !important;
-        margin-top: 15px !important;
+        margin-top: 45px !important;
     }
 
     .footer-social-icons-mobile a {
@@ -108,6 +198,9 @@
         color: #121212;
     }
 
+    .footer-mid {
+        padding: 10px !important;
+    }
     .footer-mid-grid {
         grid-template-columns: 1fr !important;
         text-align: center !important;

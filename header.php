@@ -110,6 +110,13 @@ $header_ad_code     = get_option( 'bd_news_header_ad_code', '' );
     <!-- MAIN NAVIGATION BAR -->
     <nav id="site-navigation" class="main-navigation">
         <div class="header-container flex-between">
+            
+            <!-- মোবাইল মেনু টগল বাটন (হ্যামবার্গার আইকন) - ড্রয়ারের বাইরে থাকবে -->
+            <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="hamburger-icon">☰</span>
+            </button>
+
+            <!-- স্লাইড-আউট ড্রয়ার মেনু র‍্যাপার -->
             <div class="nav-menu-wrapper">
                 <?php if ( ! empty( $custom_header_menu ) && is_array( $custom_header_menu ) ) : ?>
                     <ul id="primary-menu" class="menu">
@@ -122,6 +129,12 @@ $header_ad_code     = get_option( 'bd_news_header_ad_code', '' );
                                 <a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $title ); ?></a>
                             </li>
                         <?php endforeach; ?>
+
+                        <!-- More মেনু আইটেম -->
+                        <li class="menu-item menu-item-has-children more-menu-item">
+                            <a href="#">More ▾</a>
+                            <ul class="sub-menu"></ul>
+                        </li>
                     </ul>
                 <?php else : ?>
                     <?php
@@ -146,12 +159,6 @@ $header_ad_code     = get_option( 'bd_news_header_ad_code', '' );
                 </div>
             </div>
             
-            <div class="mobile-search-bar">
-                <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <input type="search" class="search-field" placeholder="Search News..." value="<?php echo get_search_query(); ?>" name="s" />
-                    <button type="submit" class="search-submit">🔍</button>
-                </form>
-            </div>
         </div>
     </nav>
 

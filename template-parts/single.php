@@ -24,8 +24,8 @@
                         <span class="meta-item author">
                             👤 <?php the_author(); ?>
                         </span>
-                        <span class="meta-item date">
-                            📅 <?php echo get_the_date('j F Y, g:i a'); ?>
+                        <span class="meta-item date user-local-date" data-utc-time="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
+                            📅 Loading...
                         </span>
                         <span class="meta-item time-ago">
                             ⏱️ Published <?php echo human_time_diff( get_post_time('U'), current_time('timestamp') ); ?> ago
